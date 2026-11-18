@@ -6,13 +6,13 @@
   "scripts": {
     "dev": "next dev -H 0.0.0.0",
     "build": "npm run check:content && next build",
-    "start": "next start -H 0.0.0.0",
+    "start": "next start -H 127.0.0.1",
     "typecheck": "tsc --noEmit",
     "test": "node --import tsx --test tests/*.test.ts",
-    "check:content": "tsx scripts/check-content.ts",
-    "check:seo": "tsx scripts/check-seo.ts",
-    "check:redirects": "tsx scripts/check-redirects.ts",
-    "check:links": "tsx scripts/check-links.ts",
+    "check:content": "node --import tsx scripts/check-content.ts",
+    "check:seo": "node --import tsx scripts/check-seo.ts",
+    "check:redirects": "node --import tsx scripts/check-redirects.ts",
+    "check:links": "node --import tsx scripts/check-links.ts",
     "test:e2e": "playwright test",
     "verify": "npm run typecheck && npm run check:content && npm run check:seo && npm run check:redirects && npm run check:links && npm test && npm run build",
     "migrate:posts": "python3 scripts/migrate-posts.py"
