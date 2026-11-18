@@ -1,0 +1,44 @@
+{
+  "name": "wm-price-heating",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Wm. Price Heating & Cooling — mobile-first marketing and booking site",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "npm run check:content && next build",
+    "start": "next start -H 0.0.0.0",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "check:content": "tsx scripts/check-content.ts",
+    "check:seo": "tsx scripts/check-seo.ts",
+    "check:redirects": "tsx scripts/check-redirects.ts",
+    "check:links": "tsx scripts/check-links.ts",
+    "test:e2e": "playwright test",
+    "verify": "npm run typecheck && npm run check:content && npm run check:seo && npm run check:redirects && npm run check:links && npm test && npm run build",
+    "migrate:posts": "python3 scripts/migrate-posts.py"
+  },
+  "dependencies": {
+    "next": "15.5.29",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sharp": "^0.34.0",
+    "web-vitals": "^4.2.4",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.0",
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@next/mdx": "15.5.29",
+    "@playwright/test": "^1.65.1",
+    "@types/mdx": "^2.0.13",
+    "@types/node": "^20.17.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.19",
+    "tsx": "^4.20.0",
+    "typescript": "^5.7.0"
+  }
+}
