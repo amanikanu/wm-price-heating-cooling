@@ -24,7 +24,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <a href="#main" className="skip-link">Skip to content</a>
         <AnnouncementBar />
         <StickyHeader />
-        <main id="main" tabIndex={-1} className="flex-1 pb-[11rem] lg:pb-20">{children}</main>
+        <main id="main" tabIndex={-1} className="flex-1 pb-[14rem] lg:pb-20">{children}</main>
         <Footer />
         <PreviewBanner />
         <MobileCallBar />
