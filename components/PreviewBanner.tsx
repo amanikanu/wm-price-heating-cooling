@@ -8,7 +8,7 @@ Thanks`)}`;
 
 export function PreviewBanner() {
   return (
-    <aside aria-label="Website preview information" className="border-t border-white/10 bg-[#0b1117] px-4 py-3 text-white">
+    <aside aria-label="Website preview information" className="fixed inset-x-0 bottom-[74px] z-40 border-t border-white/10 bg-[#0b1117] px-4 py-3 text-white shadow-[0_-8px_24px_-18px_rgba(0,0,0,.65)] lg:bottom-0">
       <div className="mx-auto flex w-full max-w-[78rem] flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
         <div>
           <p className="text-[11px] font-bold uppercase tracking-[.2em] text-white">A website made for your business</p>
